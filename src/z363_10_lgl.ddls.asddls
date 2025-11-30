@@ -11,8 +11,8 @@ define view entity z363_10_lgl
 
   as select from /dmo/travel as Travel
 
-  association [1..1] to /dmo/customer as _Customer on _Customer.customer_id = $projection.CustomerId
-  association [1..1] to /dmo/agency   as _Agency   on _Agency.agency_id = $projection.AgencyId
+  association [1..1] to /dmo/customer as _Customer on _Customer.customer_id = $projection.CustomerId // Example of a simple association
+  association [1..1] to /dmo/agency   as _Agency   on _Agency.agency_id = $projection.AgencyId       // AssociationAlias - (AssociationAlias-FieldAssociation) - (%projection-AliasFieldtoProject)
 {
   key travel_id   as TravelId,
       agency_id   as AgencyId,
@@ -20,3 +20,5 @@ define view entity z363_10_lgl
       _Customer,
       _Agency
 }
+
+//Association is left outer join by default

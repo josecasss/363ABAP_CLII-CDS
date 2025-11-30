@@ -14,20 +14,20 @@ define view entity z363_05_lgl
       agency_id,
 
       @Semantics.amount.currencyCode: 'CurrencyCode'
-      min( total_price ) as MinTotalPrice,
+      min( total_price ) as MinTotalPrice,                     // Minimum value of total_price 
       
       @Semantics.amount.currencyCode: 'CurrencyCode'
-      max( total_price ) as MaxTotalPrice,
+      max( total_price ) as MaxTotalPrice,                     // Maximum value of total_price
       
       @Semantics.amount.currencyCode: 'CurrencyCode'
-      sum( total_price ) as SumTotalPrice,
+      sum( total_price ) as SumTotalPrice,                     // Sum of total_price
       
-      count( distinct total_price ) as CountDistTotalPrice,
+      count( distinct total_price ) as CountDistTotalPrice,    // Count of distinct values of total_price
       
-      count( * ) as CountAllTotalPrice,
+      count( * ) as CountAllTotalPrice,                        // Count of all entries
          
       @Semantics.amount.currencyCode: 'CurrencyCode'
-      avg( total_price as abap.dec(16,2) ) as AvgTotalPrice,
+      avg( total_price as abap.dec(16,2) ) as AvgTotalPrice,   // Average value of total_price
       
       currency_code      as CurrencyCode
 }

@@ -1,7 +1,7 @@
 @AbapCatalog.viewEnhancementCategory: [#NONE]
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Amount/Quantity Reference'
-@Metadata.ignorePropagatedAnnotations: true
+@Metadata.ignorePropagatedAnnotations: true  // ignore propagated annotations (Better practice always put the anotations)
 @ObjectModel.usageType:{
     serviceQuality: #X,
     sizeCategory: #S,

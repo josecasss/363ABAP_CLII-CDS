@@ -7,3 +7,5 @@ define abstract entity z363_12_lgl
       begin_date  : /dmo/begin_date;
       end_date    : /dmo/end_date;
 }
+
+// Used for Forms 

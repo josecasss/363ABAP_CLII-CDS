@@ -4,15 +4,16 @@ class zcl_363_query_lgl definition
   create public .
 
   public section.
-    interfaces if_rap_query_provider.
+    interfaces if_rap_query_provider. " Implement the query provider interface
 
   protected section.
   private section.
-endclass.
+ENDCLASS.
 
 
 
-class zcl_363_query_lgl implementation.
+CLASS ZCL_363_QUERY_LGL IMPLEMENTATION.
+
 
   method if_rap_query_provider~select.
 
@@ -25,6 +26,7 @@ class zcl_363_query_lgl implementation.
           data(lv_top) = io_request->get_paging(  )->get_page_size(  ).
           data(lv_skip) = io_request->get_paging(  )->get_offset(  ).
 
+* Logic for fetching data from the database table (Could be more complex in real scenarios)
           select from /dmo/travel
                  fields travel_id, agency_id, customer_id
                  order by travel_id ascending
@@ -46,4 +48,4 @@ class zcl_363_query_lgl implementation.
     endtry.
 
   endmethod.
-endclass.
+ENDCLASS.
